@@ -16,7 +16,7 @@ class CarSeeder extends Seeder
 
         $cars = [
             ['brand' => 'Toyota', 'category' => 'Sedan', 'model' => 'Corolla', 'year' => 2024, 'price' => 45.00, 'transmission' => 'automatic', 'fuel_type' => 'gasoline', 'seats' => 5, 'image' => 'corolla1.png'],
-            ['brand' => 'Toyota', 'category' => 'SUV', 'model' => 'RAV4', 'year' => 2024, 'price' => 75.00, 'transmission' => 'automatic', 'fuel_type' => 'gasoline', 'seats' => 5, 'image' => 'cross1.png'],
+            ['brand' => 'Toyota', 'category' => 'SUV', 'model' => 'RAV4', 'year' => 2024, 'price' => 75.00, 'transmission' => 'automatic', 'fuel_type' => 'gasoline', 'seats' => 5, 'image' => 'https://motormagazine.com.ar/wp-content/uploads/2020/06/Toyota-RAV4-2019-1-696x464.jpg'],
             ['brand' => 'Honda', 'category' => 'Sedan', 'model' => 'Civic', 'year' => 2023, 'price' => 50.00, 'transmission' => 'automatic', 'fuel_type' => 'gasoline', 'seats' => 5, 'image' => 'civic3.png'],
             ['brand' => 'Honda', 'category' => 'SUV', 'model' => 'CR-V', 'year' => 2024, 'price' => 80.00, 'transmission' => 'automatic', 'fuel_type' => 'hybrid', 'seats' => 5, 'image' => 'crv1.png'],
             ['brand' => 'Ford', 'category' => 'Pick-Up', 'model' => 'F-150', 'year' => 2023, 'price' => 95.00, 'transmission' => 'automatic', 'fuel_type' => 'gasoline', 'seats' => 6, 'image' => 'raptor1.jpg'],
