@@ -91,13 +91,13 @@ class CarController extends Controller
     public function publicCars(Request $request)
     {
        $cars = Car::with(['brand', 'category'])
-        ->where('is_active', true)
-
         ->when($request->search, function ($query, $search) {
-            $query->where('model', 'like', "%{$search}%")
-                ->orWhereHas('brand', function ($q) use ($search) {
-                $q->where('name', 'like', "%{$search}%");
-          });
+            $query->where(function ($q) use ($search) {
+                $q->where('model', 'ILIKE', "%{$search}%")
+                ->orWhereHas('brand', function ($q2) use ($search) {
+                    $q2->where('name', 'ILIKE', "%{$search}%");
+                });
+            });
         })
 
         ->when($request->brand, function ($query, $brand) {

@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
 use Database\Seeders\BrandSeeder;
 use Database\Seeders\CarSeeder;
 use Database\Seeders\CategorySeeder;
