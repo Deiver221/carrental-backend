@@ -32,10 +32,10 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::patch('/admin/reservations/{reservation}/cancel', [ReservationController::class, 'cancel']);
     Route::get('/admin/dashboard', [AdminController::class , 'dashboard'])->middleware([AdminMiddleware::class]);
     Route::patch('/cars/{car}/toggle-active', [CarController::class, 'toggleActive']);
-    Route::get('/admin/stats', [AdminController::class , 'stats']);
     });
     
     
+    Route::get('/admin/stats', [AdminController::class , 'stats']);
     Route::get('/admin/popular-cars', [ReservationController::class, 'popularCars']);
     Route::get('/public/cars/{car}/reservations', [ReservationController::class, 'carReservations']);
     Route::get('/admin/reservations/status', [AdminController::class, 'reservationsByStatus']);
