@@ -46,7 +46,6 @@ class AdminController extends Controller
     }
     public function stats()
     {
-
         $monthlyRevenue = Reservation::select(
             DB::raw('EXTRACT(MONTH FROM start_date) as month'),
             DB::raw('SUM(total_price) as revenue')
@@ -63,13 +62,15 @@ class AdminController extends Controller
         ];
 
         $monthlyRevenue = $monthlyRevenue->map(function ($item) use ($months) {
-            $monthNumber = (int) $item->month;
-
             return [
-                'month' => $months[$monthNumber],
+                'month' => $months[(int) $item->month],
                 'revenue' => $item->revenue
             ];
         });
+
+        return response()->json([
+            'monthly_revenue' => $monthlyRevenue
+        ]);
     }
 
     public function reservationsByStatus()
