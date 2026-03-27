@@ -31,8 +31,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::patch('/admin/reservations/{reservation}/confirm', [ReservationController::class, 'confirm']);
     Route::patch('/admin/reservations/{reservation}/cancel', [ReservationController::class, 'cancel']);
     Route::get('/admin/dashboard', [AdminController::class , 'dashboard'])->middleware([AdminMiddleware::class]);
-    Route::get('/admin/stats', [AdminController::class , 'stats']);
     Route::patch('/cars/{car}/toggle-active', [CarController::class, 'toggleActive']);
+    Route::get('/admin/stats', [AdminController::class , 'stats']);
     });
     
     
