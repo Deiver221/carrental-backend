@@ -9,7 +9,7 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+   /*  public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
@@ -36,7 +36,14 @@ return new class extends Migration
             $table->integer('last_activity')->index();
         });
     }
-
+ */
+    public function up(): void
+    {
+        Schema::create('test_table', function (Blueprint $table) {
+            $table->id();
+        });
+    }
+    
     /**
      * Reverse the migrations.
      */
